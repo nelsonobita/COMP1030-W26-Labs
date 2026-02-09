@@ -20,7 +20,19 @@ class Program
                 if (col < size)
                 {
                     if (product < 10)
-                        Console.Write(product + ",  "); // single digit -> comma + TWO spaces
+                        Console.Write(product + ",  "); // single digit -> comma + two spaces
                     else
-                        Console.Write(product + ", ");  // 2+ digits -> comma + ONE space
+                        Console.Write(product + ", ");  // 2+ digits -> comma + one space
                 }
+                else
+                {
+                    Console.Write(product); // last column
+                }
+
+                col++;
+            }
+
+            Console.WriteLine(); // next row
+        }
+    }
+}

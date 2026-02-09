@@ -14,3 +14,13 @@ class Program
             while (col <= size)
             {
                 int product = row * col;
+
+
+                // Print comma + spacing between values (no comma after last item)
+                if (col < size)
+                {
+                    if (product < 10)
+                        Console.Write(product + ",  "); // single digit -> comma + TWO spaces
+                    else
+                        Console.Write(product + ", ");  // 2+ digits -> comma + ONE space
+                }

@@ -43,5 +43,22 @@ class Program
             return;
         }
 
+        // STEP 9: Ask for flooring type (build sentence using the strings)
+        Console.WriteLine();
+        Console.WriteLine("Which flooring would you like?");
+        Console.WriteLine($"A) {floorA}");
+        Console.WriteLine($"B) {floorB}");
+        Console.WriteLine($"C) {floorC}");
+        Console.Write("Enter A, B, or C: ");
+
+        // STEP 10: Validate the letter choice
+        choice = (Console.ReadLine() ?? "").Trim().ToUpper();
+
+        if (choice != "A" && choice != "B" && choice != "C")
+        {
+            Console.WriteLine("Error: Please enter only A, B, or C.");
+            return;
+        }
+
 
 

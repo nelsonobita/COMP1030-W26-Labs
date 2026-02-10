@@ -25,4 +25,11 @@ class Program
         Console.Write("Enter the room LENGTH in feet (e.g., 12.5): ");
         string lengthInput = Console.ReadLine();
 
+        // STEP 6: Validate length is a number
+        if (!double.TryParse(lengthInput, out lengthFeet))
+        {
+            Console.WriteLine("Error: Length must be a number (example: 12.5).");
+            return;
+        }
+
 

@@ -18,3 +18,6 @@ class Program
         // STEP 4: Length and width (feet, one decimal point)
         double lengthFeet = 0.0;
         double widthFeet = 0.0;
+
+        Console.WriteLine("Welcome to the C# Flooring calculator");
+       

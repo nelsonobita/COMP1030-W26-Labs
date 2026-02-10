@@ -4,46 +4,47 @@ class Program
 {
     static void Main()
     {
-        // Assignment 1 -  C# Flooring program
+        // Assignment 1 -  Georgian C# Flooring Shop Program
         // Floor room calculating program
 
-// step 2: Three flooring options (strings) that include price per sq. ft.
+
+        // three flooring options (strings) that include price per sq. ft.
         string option1 = "Option 1: Hardwood - $5.00 per sq. ft.";
         string option2 = "Option 2: Laminate - $3.00 per sq. ft.";
         string option3 = "Option 3: Carpet - $2.00 per sq. ft.";
 
-        // STEP 3: Variable to capture the user's flooring choice
+        // variable to capture the user's flooring choice
         string choice = "";
 
-        // STEP 4: Length and width (feet, one decimal point)
+        // length and width (feet, one decimal point)
         double lengthFeet = 0.0;
         double widthFeet = 0.0;
 
         Console.WriteLine("Welcome to the C# Flooring calculator");
 
-        // STEP 5: Ask for length
+        // ask for length
         Console.Write("Enter the room LENGTH in feet (e.g., 12.5): ");
         string lengthInput = Console.ReadLine();
 
-        // STEP 6: Validate length is a number
+        // validate length is a number
         if (!double.TryParse(lengthInput, out lengthFeet))
         {
             Console.WriteLine("Error: Length must be a number (example: 12.5).");
             return;
         }
 
-        // STEP 7: Ask for width
+        // ask for width
         Console.Write("Enter the room WIDTH in feet (e.g., 10.0): ");
         string widthInput = Console.ReadLine();
 
-        // STEP 8: Validate width is a number
+        // validate width is a number
         if (!double.TryParse(widthInput, out widthFeet))
         {
             Console.WriteLine("Error: Width must be a number (example: 10.0).");
             return;
         }
 
-        // STEP 9: Ask for flooring type (build sentence using the strings)
+        // ask for flooring type (build sentence using the strings)
         Console.WriteLine();
         Console.WriteLine("Which flooring would you like?");
         Console.WriteLine($"A) {floorA}");
@@ -51,7 +52,7 @@ class Program
         Console.WriteLine($"C) {floorC}");
         Console.Write("Enter A, B, or C: ");
 
-        // STEP 10: Validate the letter choice
+        // validate the letter choice
         choice = (Console.ReadLine() ?? "").Trim().ToUpper();
 
         if (choice != "A" && choice != "B" && choice != "C")
@@ -59,6 +60,45 @@ class Program
             Console.WriteLine("Error: Please enter only A, B, or C.");
             return;
         }
+
+        // area calculation (sq. ft.)
+        decimal area = (decimal)lengthFeet * (decimal)widthFeet;
+
+        // if() statements for each flooring choice + math
+        string selectedFloor = "";
+        decimal selectedPrice = 0m;
+
+        if (choice == "A")
+        {
+            selectedFloor = floorA;
+            selectedPrice = priceA;
+        }
+
+        if (choice == "B")
+        {
+            selectedFloor = floorB;
+            selectedPrice = priceB;
+        }
+
+        if (choice == "C")
+        {
+            selectedFloor = floorC;
+            selectedPrice = priceC;
+        }
+
+        decimal totalCost = area * selectedPrice;
+
+        // output summary sentence
+        Console.WriteLine();
+        Console.WriteLine("Result!");
+        Console.WriteLine($"You picked: {selectedFloor}");
+        Console.WriteLine($"Room size: {lengthFeet:F1} ft x {widthFeet:F1} ft = {area:F2} sq.ft.");
+        Console.WriteLine($"Final cost: ${totalCost:F2}");
+
+        Console.WriteLine();
+        Console.WriteLine("Thank you for using The Georgian C# Flooring Shop!");
+    }
+}
 
 
 

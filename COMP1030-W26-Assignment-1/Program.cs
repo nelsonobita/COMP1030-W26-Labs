@@ -9,9 +9,13 @@ class Program
 
 
         // three flooring options (strings) that include price per sq. ft.
-        string option1 = "Option 1: Hardwood - $5.00 per sq. ft.";
-        string option2 = "Option 2: Laminate - $3.00 per sq. ft.";
-        string option3 = "Option 3: Carpet - $2.00 per sq. ft.";
+        string floorA = "Bamboo Flooring - $5.00 per sq. ft.";
+        string floorB = "Solid Oak Hardwood - $3.00 per sq. ft.";
+        string floorC = "Porcelain Tile - $2.00 per sq. ft.";
+
+        decimal priceA = 5.00m;
+        decimal priceB = 3.00m;
+        decimal priceC = 2.00m;
 
         // variable to capture the user's flooring choice
         string choice = "";
@@ -90,7 +94,7 @@ class Program
 
         // output summary sentence
         Console.WriteLine();
-        Console.WriteLine("Result!");
+        Console.WriteLine("Results:");
         Console.WriteLine($"You picked: {selectedFloor}");
         Console.WriteLine($"Room size: {lengthFeet:F1} ft x {widthFeet:F1} ft = {area:F2} sq.ft.");
         Console.WriteLine($"Final cost: ${totalCost:F2}");

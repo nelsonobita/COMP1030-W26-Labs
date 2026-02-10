@@ -20,4 +20,9 @@ class Program
         double widthFeet = 0.0;
 
         Console.WriteLine("Welcome to the C# Flooring calculator");
-       
+
+        // STEP 5: Ask for length
+        Console.Write("Enter the room LENGTH in feet (e.g., 12.5): ");
+        string lengthInput = Console.ReadLine();
+
+

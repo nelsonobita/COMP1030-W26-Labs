@@ -14,3 +14,7 @@ class Program
 
         // STEP 3: Variable to capture the user's flooring choice
         string choice = "";
+
+        // STEP 4: Length and width (feet, one decimal point)
+        double lengthFeet = 0.0;
+        double widthFeet = 0.0;

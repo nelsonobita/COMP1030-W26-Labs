@@ -32,4 +32,16 @@ class Program
             return;
         }
 
+        // STEP 7: Ask for width
+        Console.Write("Enter the room WIDTH in feet (e.g., 10.0): ");
+        string widthInput = Console.ReadLine();
+
+        // STEP 8: Validate width is a number
+        if (!double.TryParse(widthInput, out widthFeet))
+        {
+            Console.WriteLine("Error: Width must be a number (example: 10.0).");
+            return;
+        }
+
+
 

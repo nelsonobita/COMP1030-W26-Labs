@@ -2,7 +2,6 @@
 
 class Program
 {
-    // added includeDate as a 4th parameter
     public static string Alert(int level, string message, bool sound, bool includeDate)
     {
         if (sound)
@@ -33,7 +32,30 @@ class Program
         }
         Console.Clear();
 
-        string result = $"Alert level {level}. {message}. {howSerious}";
+        // if includeDate is true, grab current date, otherwise leave it empty
+        string date;
+
+        if (includeDate)
+        {
+            date = DateTime.Now.ToString("yyyy-MM-dd");
+        }
+        else
+        {
+            date = "";
+        }
+
+        // include date in result if it exists
+        string result;
+
+        if (date != "")
+        {
+            result = $"[{date}] Alert level {level}. {message}. {howSerious}";
+        }
+        else
+        {
+            result = $"Alert level {level}. {message}. {howSerious}";
+        }
+
         return result;
     }
 

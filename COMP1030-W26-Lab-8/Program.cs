@@ -2,7 +2,8 @@
 
 class Program
 {
-    public static string Alert(int level, string message, bool sound)
+    // added includeDate as a 4th parameter
+    public static string Alert(int level, string message, bool sound, bool includeDate)
     {
         if (sound)
         {
@@ -38,7 +39,7 @@ class Program
 
     static void Main()
     {
-        string alertMessage = Alert(level: 3, message: "We are all out of coffee", sound: true);
+        string alertMessage = Alert(level: 3, message: "We are all out of coffee", sound: true, includeDate: true);
         Console.WriteLine(alertMessage);
     }
 }

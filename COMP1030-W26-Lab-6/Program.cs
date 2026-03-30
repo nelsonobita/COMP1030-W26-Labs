@@ -18,3 +18,14 @@
             {
                 Console.WriteLine(iceCreamFlavors[i]);
             }
+
+            // step 6 - same thing but letting them know we're switching to foreach now
+            Console.WriteLine("\nHere are all the ice cream flavors available at our stand (using a FOREACH loop):");
+
+            // step 7 and 8 - foreach loop, cleaner since we dont need the index
+            foreach (string flavor in iceCreamFlavors)
+            {
+                Console.WriteLine(flavor);
+            }
+        }
+    }

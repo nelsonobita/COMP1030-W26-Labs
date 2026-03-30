@@ -1,11 +1,17 @@
 ﻿namespace Lab9
 {
-    // step 5 - creating the Ball class
     class Ball
     {
-        // step 6 - the 3 properties of a ball
         public string Color;
         public int Size;
         public string Material;
+
+        // step 7a and 7b - constructor sets all 3 properties
+        public Ball(string color, int size, string material)
+        {
+            Color = color;
+            Size = size;
+            Material = material;
+        }
     }
 }

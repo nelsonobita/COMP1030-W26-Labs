@@ -13,7 +13,6 @@
             Material = material;
         }
 
-        // step 8a, 8b, 8c - Description method builds and outputs a sentence about the ball
         public void Description()
         {
             string description = $"This ball is {Color}, {Size} cm in diameter, and made of {Material}.";
